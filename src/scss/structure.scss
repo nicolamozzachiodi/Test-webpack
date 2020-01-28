@@ -1,0 +1,21 @@
+#app {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+
+    .evidenza {
+        .slick-slide {
+            padding: 5px;
+        }
+    }
+    .altri-post {
+        display: flex;
+        .post {
+            padding: 5px;
+        }
+    }
+    
+    img {
+        max-width: 100%;
+    }
+}
