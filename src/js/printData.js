@@ -6,7 +6,6 @@ import slickConfig from './sliderConfig';
 function printElement (postArray) {
     for (let i = 0; i < postArray.length; i++) {
         let post = postArray[i].fields;
-        console.log(post);
         if(post.isNew) {
             $('.evidenza').append(`
             <div data-position="${i}" class="post">
@@ -24,6 +23,8 @@ function printElement (postArray) {
             `)
         }
     }
+    $('.evidenza').slick(slickConfig.carouselThreeSlides);
     
 }
+
 export default printElement;
