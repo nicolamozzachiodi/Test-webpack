@@ -29,4 +29,4 @@ gulp.task('watch', function () {
     gulp.watch('src/**/*.scss', gulp.parallel('styles'));
 })
 
-gulp.task('default', gulp.parallel('scripts', 'styles'))
+gulp.task('default', gulp.parallel('scripts', 'styles', 'watch'))
