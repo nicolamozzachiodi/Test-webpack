@@ -1,9 +1,11 @@
 import $ from 'jquery';
 
 import apiKey from './apiKey';
-import changePages from './findPostData'
+import changePages from './getPostData';
+import post from './post';
 
 $(document).ready(function () {
-    apiKey();
+    apiKey.getAllPost();
     changePages();
+    post();
 });

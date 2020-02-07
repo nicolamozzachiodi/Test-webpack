@@ -8,18 +8,24 @@ function printElement (postArray) {
         let post = postArray[i].fields;
         if(post.isNew) {
             $('.evidenza').append(`
-            <div data-position="${i}" class="post">
-                <img src="${post.image.fields.file.url}" />
-                <h3>${post.title}</h3>
-                <p>${post.description}</p>
-            </div>`);
+            <a href="javascript:void(0)">
+                <div data-position="${i}" data-id="${postArray[i].sys.id}" class="post">
+                    <img src="${post.image.fields.file.url}" />
+                    <h3>${post.title}</h3>
+                    <p>${post.description}</p>
+                    </div>
+                </a>
+            `);
+                
         } else {
             $('.altri-post').append(`
-            <div data-position="${i}" class="post">
-                <img src="${post.image.fields.file.url}" />
-                <h3>${post.title}</h3>
-                <p>${post.description}</p>
-            </div>
+            <a href="javascript:void(0)">
+                <div data-position="${i}" data-id="${postArray[i].sys.id}" class="post">
+                    <img src="${post.image.fields.file.url}" />
+                    <h3>${post.title}</h3>
+                    <p>${post.description}</p>
+                </div>
+            </a>    
             `)
         }
     }
